@@ -1,0 +1,79 @@
+<html>
+    <head>
+        <style>
+            
+            .trafficLight {
+                width: 3rem;
+                height: 10rem;
+                display: flex;
+                flex-direction: column;
+                background-color: black;
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            #red, #yellow, #green {
+                background-color: red;
+                border-radius: 50%;
+                width: 3rem;
+                height: 3rem;
+            }
+
+        </style>
+    </head>
+    <body id="content">
+        <p>Klikk på trafikklyset for å endre farger:</p>
+        <div class="trafficLight" onclick="changeColor1()">
+            <div id="red" style="background-color: red;"></div>
+            <div id="yellow" style="background-color: gray;"></div>
+            <div id="green" style="background-color: gray;"></div>
+        </div>
+
+        <script>
+
+            let body = document.getElementById('content');
+
+            function changeColor1() {
+                body.innerHTML = /*HTML*/`
+                <p>Klikk på trafikklyset for å endre farger:</p>
+                <div class="trafficLight" onclick="changeColor2()">
+                    <div id="red" style="background-color: red;"></div>
+                    <div id="yellow" style="background-color: yellow;"></div>
+                    <div id="green" style="background-color: gray;"></div>
+                `
+            }
+
+            function changeColor2() {
+                 body.innerHTML = /*HTML*/`
+                 <p>Klikk på trafikklyset for å endre farger:</p>
+                 <div class="trafficLight" onclick="changeColor3()">
+                    <div id="red" style="background-color: gray;"></div>
+                    <div id="yellow" style="background-color: gray;"></div>
+                    <div id="green" style="background-color: lightgreen;"></div>
+                `
+            }
+
+            function changeColor3() {
+                 body.innerHTML = /*HTML*/`
+                 <p>Klikk på trafikklyset for å endre farger:</p>
+                 <div class="trafficLight" onclick="changeColor4()">
+                    <div id="red" style="background-color: gray;"></div>
+                    <div id="yellow" style="background-color: yellow;"></div>
+                    <div id="green" style="background-color: gray;"></div>
+                `
+            }
+
+            function changeColor4() {
+                 body.innerHTML = /*HTML*/`
+                 <p>Klikk på trafikklyset for å endre farger:</p>
+                 <div class="trafficLight" onclick="changeColor1()">
+                    <div id="red" style="background-color: red;"></div>
+                    <div id="yellow" style="background-color: gray;"></div>
+                    <div id="green" style="background-color: gray;"></div>
+                `
+            }
+
+        </script>
+
+    </body>
+    </html>
